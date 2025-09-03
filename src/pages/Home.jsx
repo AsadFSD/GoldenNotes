@@ -12,7 +12,7 @@ function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Welcome to <span className="highlight">My Notes</span>
+        Welcome to <span className="highlight">Golden Notes</span>
       </motion.h1>
 
       <motion.p
