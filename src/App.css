@@ -1,0 +1,177 @@
+/* =====================
+   Global Reset
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   Base Theme
+===================== */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #eaeaea;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.5s ease;
+}
+
+/* =====================
+   Global Links
+===================== */
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #FFD700;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* =====================
+   Layout
+===================== */
+main {
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 60px);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* =====================
+   Buttons (Global)
+===================== */
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  background: #333;
+  color: #f5f5f5;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #FFD700;
+  color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* =====================
+   Inputs (Global)
+===================== */
+input, select, textarea {
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: #eaeaea;
+  padding: 0.6rem 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #FFD700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* =====================
+   Utility Classes
+===================== */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  animation: fadeInUp 0.9s ease;
+}
+
+/* =====================
+   Animations
+===================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   Responsive Design
+===================== */
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}

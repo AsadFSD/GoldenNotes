@@ -1,0 +1,121 @@
+/* ==========================
+   Home Page Styles
+========================== */
+
+.home-container {
+  position: relative; /* ✅ Needed for wave layering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 80vh;
+  color: #f1f1f1;
+  overflow: hidden; /* ✅ keep waves inside */
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+}
+
+/* ==========================
+   Wave Backgrounds
+========================== */
+.home-container::before,
+.home-container::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  bottom: -10%;
+  width: 200%;
+  height: 45%; /* ✅ covers ~40–45% */
+  background: rgba(0, 0, 0, 0.6); /* ✅ dark shadow look */
+  border-radius: 50% 50% 0 0;
+  animation: smooth-wave 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+.home-container::after {
+  opacity: 0.4;
+  animation-delay: -5s; /* offset second wave */
+  height: 50%; /* slightly different height */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================
+   Wave Animation
+========================== */
+@keyframes smooth-wave {
+  0% {
+    transform: translateX(0) translateY(0) scale(1.1);
+  }
+  25% {
+    transform: translateX(-15%) translateY(10px) scale(1.05);
+  }
+  50% {
+    transform: translateX(-30%) translateY(0) scale(1.1);
+  }
+  75% {
+    transform: translateX(-15%) translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1.1);
+  }
+}
+
+/* ==========================
+   Text + Buttons
+========================== */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+.highlight {
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #ddd;
+  z-index: 1;
+}
+
+.home-buttons {
+  z-index: 1;
+}
+
+.home-buttons .start-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #121212;
+  background: #FFD700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(255, 215, 0, 0.3);
+}
+
+.home-buttons .start-btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 215, 0, 0.4);
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}
