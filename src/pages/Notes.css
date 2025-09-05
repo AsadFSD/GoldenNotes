@@ -1,8 +1,4 @@
-/* ==========================
-   Notes Page Styles
-========================== */
 
-/* Page container */
 .notes-page {
   width: 100%;
   max-width: 750px;
@@ -15,18 +11,16 @@
   animation: fadeInUp 0.6s ease;
 }
 
-/* Title */
 .notes-title {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 1.5rem;
-  color: #FFD700; /* Gold */
+  color: #FFD700; 
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.4);
   animation: glowPulse 2s infinite alternate;
 }
 
-/* Glow animation */
 @keyframes glowPulse {
   from {
     text-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
@@ -36,7 +30,6 @@
   }
 }
 
-/* Top bar */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -61,7 +54,6 @@
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
-/* Buttons container */
 .buttons {
   display: flex;
   gap: 0.7rem;
@@ -92,7 +84,6 @@
   display: none;
 }
 
-/* Toolbar for text formatting */
 .note-toolbar {
   display: flex;
   align-items: center;
@@ -126,7 +117,6 @@
   color: #121212;
 }
 
-/* Category select (compact like button) */
 .category-select {
   min-width: auto;
   padding: 0.45rem 0.9rem;
@@ -145,7 +135,6 @@
   border-color: #FFD700;
 }
 
-/* Note form */
 .note-form {
   display: flex;
   gap: 0.8rem;
@@ -154,7 +143,6 @@
   align-items: flex-start;
 }
 
-/* Notepad style input */
 .note-input {
   flex: 1;
   min-height: 12em;
@@ -178,7 +166,6 @@
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
 }
 
-/* Add button (fixed width, not stretched) */
 .note-form button {
   background: #FFD700;
   color: #121212;
@@ -188,7 +175,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  flex: 0 0 auto; /* prevents stretching */
+  flex: 0 0 auto; 
 }
 
 .note-form button:hover {
@@ -197,14 +184,12 @@
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
 }
 
-/* Notes list */
 .notes-list {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
 }
 
-/* Note card */
 .note-card {
   background: #2b2b2b;
   padding: 1rem;
@@ -233,7 +218,6 @@
   line-height: 1.5;
 }
 
-/* Actions */
 .note-actions {
   display: flex;
   gap: 0.6rem;

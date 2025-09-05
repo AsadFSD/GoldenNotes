@@ -10,18 +10,16 @@ function Notes() {
   const [activeFormats, setActiveFormats] = useState([]);
   const editorRef = useRef(null);
 
-  // Load saved notes
+
   useEffect(() => {
     const saved = localStorage.getItem("notes");
     if (saved) setNotes(JSON.parse(saved));
   }, []);
 
-  // Save notes on update
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-  // Toggle format state + run command
   const toggleFormat = (command) => {
     document.execCommand(command, false, null);
     editorRef.current.focus();
@@ -33,7 +31,7 @@ function Notes() {
     );
   };
 
-  // Add or update note
+
   const addNote = () => {
     const content = editorRef.current.innerHTML.trim();
     if (!content) return;
@@ -55,19 +53,16 @@ function Notes() {
     setActiveFormats([]);
   };
 
-  // Delete note
   const deleteNote = (id) => {
     setNotes(notes.filter((n) => n.id !== id));
   };
 
-  // Edit note
   const editNote = (note) => {
     editorRef.current.innerHTML = note.text;
     setCategory(note.category);
     setEditingId(note.id);
   };
 
-  // Export notes
   const exportNotes = () => {
     const blob = new Blob([JSON.stringify(notes, null, 2)], {
       type: "application/json",
@@ -79,7 +74,6 @@ function Notes() {
     link.click();
   };
 
-  // Import notes
   const importNotes = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -95,7 +89,7 @@ function Notes() {
     reader.readAsText(file);
   };
 
-  // Filter notes
+
   const filteredNotes = notes.filter(
     (n) =>
       n.text.toLowerCase().includes(search.toLowerCase()) ||
@@ -105,8 +99,6 @@ function Notes() {
   return (
     <div className="app">
       <h1 className="title">My Notes</h1>
-
-      {/* Top bar */}
       <div className="top-bar">
         <input
           className="search"
@@ -128,7 +120,6 @@ function Notes() {
         </div>
       </div>
 
-      {/* Toolbar + Category row */}
       <div className="note-toolbar">
         <div className="style-buttons">
           <button
@@ -169,7 +160,6 @@ function Notes() {
         </select>
       </div>
 
-      {/* Notepad editor + add button */}
       <div className="note-form">
         <div
           ref={editorRef}
@@ -180,7 +170,6 @@ function Notes() {
         <button onClick={addNote}>{editingId ? "Update" : "Add"}</button>
       </div>
 
-      {/* Notes list */}
       <div className="notes-list">
         <AnimatePresence>
           {filteredNotes.map((note) => (

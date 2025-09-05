@@ -1,4 +1,4 @@
-// src/pages/About.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 import "./About.css";
@@ -6,7 +6,6 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about-page">
-      {/* Title */}
       <motion.h1
         className="about-title"
         initial={{ opacity: 0, y: -30 }}
@@ -16,7 +15,6 @@ const About = () => {
         About GoldenNotes
       </motion.h1>
 
-      {/* Intro */}
       <motion.p
         className="about-intro"
         initial={{ opacity: 0 }}
@@ -31,7 +29,6 @@ const About = () => {
         </a>
       </motion.p>
 
-      {/* Future updates */}
       <motion.div
         className="about-section"
         initial={{ opacity: 0, x: -50 }}
@@ -48,7 +45,6 @@ const About = () => {
         </ul>
       </motion.div>
 
-      {/* Closing */}
       <motion.p
         className="about-footer"
         initial={{ opacity: 0, y: 30 }}
