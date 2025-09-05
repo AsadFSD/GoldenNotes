@@ -46,17 +46,10 @@ GoldenNotes will continue to evolve. Planned improvements include:
 
 ---
 
-## 📷 Preview
-
-![GoldenNotes Demo Screenshot](#)  
-*(Add a screenshot or GIF of the app once available)*  
-
----
-
 ## 📌 About
 
 GoldenNotes is part of my journey in improving UI/UX and frontend logic.  
-It builds upon my first prototype by making the experience more **polished, responsive, and user-friendly**.  
+It is built upon my first prototype by making the experience more **polished, responsive, and user-friendly**.  
 
 🔗 Check out my portfolio: [asadomer.vercel.app](https://asadomer.vercel.app/)
 
