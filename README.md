@@ -88,94 +88,25 @@ Choose from professionally designed themes:
 
 ## 🛠️ Tech Stack
 
-- **React 19** – Modern UI framework
-- **Vite 7** – Fast build tool and dev server
-- **React Router 7** – Client-side routing
-- **Framer Motion 12** – Smooth animations and transitions
-- **Marked.js** – Markdown parsing and rendering
-- **CSS3** – Advanced styling with Grid, Flexbox, Custom Properties
-- **SVG** – Vector graphics for knowledge graphs
-- **LocalStorage API** – Client-side persistence
+- **Frontend:** React (with React Router)  
+- **Styling:** Custom CSS (with animations)  
+- **Routing:** React Router DOM  
+- **Editor:** Custom Rich Text Editor with formatting logic  
 
 ---
 
-## 🎯 Design Philosophy
+## 📷 Preview
 
-- **Modern & Polished** – Clean, contemporary interface with thoughtful animations
-- **User-Centric** – Intuitive design that gets out of your way
-- **Performance-First** – Fast load times and smooth interactions
-- **Accessible** – Keyboard shortcuts, responsive controls, readable typography
-- **Customizable** – Multiple themes and personal preferences
-- **Connected** – Help users build knowledge networks through linking
+![GoldenNotes Demo Screenshot](#)  
+*(Add a screenshot or GIF of the app once available)*  
 
 ---
 
-## 📋 Browser Support
+## 📌 About
 
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
+GoldenNotes is part of my journey in improving UI/UX and frontend logic.  
+It builds upon my first prototype by making the experience more **polished, responsive, and user-friendly**.  
 
----
-
-## 🚀 Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Start dev server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
+🔗 Check out my portfolio: [asadomer.vercel.app](https://asadomer.vercel.app/)
 
 ---
-
-## 📸 Features in Action
-
-- Create notes with rich markdown formatting
-- Switch between themes instantly
-- Build knowledge graphs by linking notes
-- Use AI assistant for quick summaries and templates
-- Tag and categorize for better organization
-- Export all notes with one click
-
----
-
-## 💡 Use Cases
-
-- 📚 **Students** – Organize research, class notes, and study materials
-- 💼 **Professionals** – Project management, meeting notes, knowledge base
-- ✍️ **Writers** – Long-form content, ideas, and story outlines
-- 🧠 **Thinkers** – Build a personal knowledge management system
-- 👨‍💻 **Developers** – Code snippets, documentation, technical notes
-
----
-
-## 🤝 Contributing
-
-This project is actively maintained. Suggestions and improvements are welcome!
-
----
-
-## 📄 License
-
-Built with ❤️ for knowledge workers everywhere.
-
----
-
-## 🔗 Links
-
-- **Portfolio** – [asadomer.vercel.app](https://asadomer.vercel.app/)
-- **GitHub** – [github.com/asadomer](https://github.com/asadomer)
-- **Live Demo** – [goldennotes.vercel.app](https://goldennotes.vercel.app/)
-
----
-
-**Made with React, Vite, and attention to detail.** ✨
